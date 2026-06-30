@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <!-- what if computer nerds had a skatepark -->
+    <p>welcome to...</p>
+    <div class="title">
+        <pre>
+   _    _____   ____  _____  _____    _____  _  __    _   _____  _____  _____   _    ____  _  __ 
+  / \  / ____) /  __)(_   _)(_   _)  / ____)/ |/  /  / \ (_   _)/  ___)/     \ / \  /    \/ |/  /
+ / ^ \ \____ \(  (__  _) (_  _) (_   \____ \|    <  / ^ \  | |  |  ___)|  ^__// ^ \ |  ^ /|    < 
+(_/`\_)(_____/ \____)(_____)(_____)  (_____/|_|\__\(_/`\_) |_|  |_____)|__|  (_/`\_)|_|\_\|_|\__\
+        </pre>
+    </div>
+
+    <p>est. june 2026</p>
+    <div>
+        <button id=sprayCan" can-move>
+            <pre>
+    _ 
+::>[_]
+   [ ]
+   [_]
+            </pre>
+        </button>
+
+    </div>
+
+    <pre>
+
+     _/l_________                                                        _________/l_
+    // /         /|                                                    /         // /|
+   // /         / |                                                   /         // / |
+  // /         /  |                                                  /         // /  |
+ // /         /    \                                                /         // /   |
+/_l/_________/      \                                              /_________l/_/    |
+|            |       \                                             |            |    |
+|            |        \                                            |            |    |
+|            |         `\                                         /|            |    |
+|             \          `\                                     /'/             |    |
+|              \           ``\          half-pipe            /'' /              |    |
+|               \             ```-------------------------'''   /               |    |
+|                \                                             /                |    |
+|                 `\                                         /'                 |    |
+|                   `\                                     /'                   |     
+|                     ``\                               /''                     |     
+                         ```-------------------------'''                             
+    
+ 
+                         
+                  ____________                                                   
+                 /            /|                                                 
+                /            /  \                                                
+               /            /    \                                               
+              /            /      `*    quater-pipe with stair & rail         
+      _______/___________ /         ``______________                             
+             |            |                        /|__                          
+             '             \                      / / /|_________________________
+            /               \                    / / / /                         
+          *'                 `*                 / / / /         /-------------/  
+________''                     ``______________/ / / /          |_____________|  
+                                               |/_/ /                            
+                                                  |/__________________________       
+    
+    </pre>
+
+    <!-- select your board -->
+    <div class="fixBottom">
+        
+        <div class="boardSelector">
+            <div>
+                <p>classic</p>
+                <button id="11" can-move="">
+                <pre> 
+ ____ 
+(____)
+ °  ° 
+                </pre>
+            </button>
+            </div>
+            <div>
+                <p>cruiser</p>
+                <button id="21" can-move>
+                    <pre> 
+ ____/
+(____/
+ °  ° 
+                    </pre>
+                </button>
+            </div>
+            <div>
+                <p>razor scooter</p>
+                <button id="31" can-move>
+                    <pre> 
+T     
+|____ 
+(____)
+ °  ° 
+                    </pre>
+                </button>
+            </div>
+            <div>
+                <p>
+                    hover board</p>
+                <button id="41" can-move>
+                    <pre> 
+ ____ 
+(____)
+ ~ ~ ~ 
+                    </pre>
+                </button>
+            </div>
+            <div>
+                <p>key board</p>
+                <button id="511" can-move>
+                    <pre>   
+ __S_ 
+[::::]
+ ¯¯¯¯ 
+                    </pre>
+                </button>
+            </div>
+        </div>
+        <br>
+        <p>select a board</p>
+        <br>
+    </div>
+    
+ 
+    <script type="module">
+        import { playhtml } from 'https://unpkg.com/playhtml';
+         playhtml.init();
+    </script>
+    
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+        font-size: small;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .fixBottom {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
+    .boardSelector {
+        display: flex;
+    }
+    .boardSelector > div {
+        text-align: center;
+        /* border: red solid 1px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+        min-width: 0;
+        border: black dashed 2px;
+        margin: 10px;
+        padding: 5px
+    }
+    button {
+        border: none;
+        background: none;
+    }
+</style>
+
+<script>
+    console.log("workking")
+    // first click = can-move
+    // second click = can-spin
+    // and repeat
+    const clickableElements = document.querySelectorAll('button');
+    for (let i = 0; i < clickableElements.length; i++) {
+        clickableElements[i].addEventListener("mousedown", changeCapability);
+    }
+
+    // function changeCapability() {
+    //     console.log("changinCapibility");
+    //     console.log(this.outerHTML);
+    //     const currentTransform = this.style.transform;
+    //     if (this.hasAttribute("can-move")) {
+    //         this.removeAttribute("can-move");
+    //         this.setAttribute("can-spin", "");
+    //     } else {
+    //         this.removeAttribute("can-spin");
+    //         this.setAttribute("can-move", "");
+    //     }
+    //     playhtml.setupPlayElement(this);
+    //     this.style.transform = currentTransform;
+    // }
+
+    // if using spraypaint, colour background
+
+</script>
